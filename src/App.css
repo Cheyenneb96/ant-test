@@ -1,3 +1,5 @@
+@import '~antd/dist/antd.css';
+
 .App {
   text-align: center;
 }
@@ -36,3 +38,33 @@
     transform: rotate(360deg);
   }
 }
+
+.site-calendar-demo-card {
+  width: 300px;
+  border: 1px solid #f0f0f0;
+  border-radius: 2px;
+}
+  [data-theme="dark"] .site-calendar-demo-card {
+    border: 1px solid #303030;
+  }
+
+  .container {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1px 2px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "calendar times"
+      "logs logs";
+  }
+
+  .calendar { grid-area: calendar; }
+
+  .times { grid-area: times; }
+
+  .logs {
+    font-size: 30px;
+    text-align: left;
+    padding-top: 10px;
+    grid-area: logs;
+  }
